@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon gestionnaire de tâches</title>
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mon gestionnaire de tâches</h1>
+    </header>
+    <main>
+        <div class="addTaskCard">
+            <div class="headerTaskCard">
+                <h2>Créer une nouvelle tâche à faire:</h2>
+                <div class="titleTask">
+                    <p>Qu'elle tâche je dois réaliser ?</p>
+                    <input type="text" id="titleTask" name="tâche à réaliser" placeholder="ex : Créer un site web">
+                </div>
+                <div class="descriptionTask">
+                    <p>Décrivez votre tâche :</p>
+                    <input type="text" id="descriptionTask" name="Décrivez votre tâche" placeholder="Décrivez votre tâche">
+                </div>
+            </div>
+            <div class="taskPriority">
+                <p>Choisissez une priorité :</p>
+                <label for="priorityElevée">
+                    <input type="radio" name="priority" id="priorityElevée" value="2">Elevée
+                </label>
+                <label for="priorityMoyenne">
+                    <input type="radio" name="priority" id="priorityMoyenne" value="1">Moyenne
+                </label>
+                <label for="priorityFaible">
+                    <input type="radio" name="priority" id="priorityFaible" value="0">Faible
+                </label>
+            </div>
+            <div class="taskTime">
+                <p>A réaliser avant le :</p>
+                <input type="date" name="échéance tâche" id="echeanceTask">
+            </div>
+            <div class="addTask">
+                <button id="buttonAddTaskToList">Ajouter une tâche</button>
+            </div>
+        </div>
+        <div class="listTasks">
+            <h2 class="listTasksTitle">Liste des choses à faire :</h2>
+            <div class="filterContainer">
+                <select id="priorityFilter" class="filterPriority">
+                    <option value="all">Toutes les priorités</option>
+                    <option value="2">Priorité élevée</option>
+                    <option value="1">Priorité moyenne</option>
+                    <option value="0">Priorité faible</option>
+                </select>
+                <select id="statusFilter" class="filterStatus">
+                    <option value="all">Toutes les tâches</option>
+                    <option value="active">Non terminées</option>
+                    <option value="completed">Terminées</option>
+                </select>
+            </div>
+            <ul id="taskList">
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>Travail réalisé par Fabien</p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="style/javascript" src="style.js"></script>
+</body>
+</html>
