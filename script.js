@@ -37,6 +37,8 @@ function addTask (taskToAdd) {
 // Fonction qui supprime une tâche de la liste :
 
 function removeTask (taskIdToRemove) {
+    
+    if(confirm("Êtes vous sûr de vouloir supprimer cette tâches ?"))
     taskList = taskList.filter((task) => taskIdToRemove !== task.id)
     saveToLocalStorage()
     paint()
@@ -133,9 +135,14 @@ function getPriority (){
 
 // Fonction qui permet de sauvegarder la liste :
 function saveToLocalStorage(){
-    localStorage.setItem("taskList", JSON.stringify(taskList))
-}
+    try {
+        localStorage.setItem("taskList", JSON.stringify(taskList))
 
+    } catch(error) {
+        console.error("erreur lors de la sauvegarde",error)
+        alert("impossible de sauvegarder les tâches")
+    };
+}
 // Fonction qui permet de récupérer la liste dans le localStorage :
 function loadTasksFromLocalStorage(){
     const existedTasks = localStorage.getItem("taskList")
@@ -144,8 +151,7 @@ function loadTasksFromLocalStorage(){
 }
 
 
-// Fonction de filtrage :
-
+// Fonction de filtrage:
 function filterTasks(taskList) {
     const selectedPriority = document.querySelector('input[name="filterPriority"]:checked');
     const priorityFilter = selectedPriority ? selectedPriority.value : 'all';
@@ -248,7 +254,7 @@ function paint() {
         })
         cardButton.appendChild(terminatedBtn)
         
-
+        // Ajout du bouton de suppression :
 
 
         let removeBtn = document.createElement('button')
