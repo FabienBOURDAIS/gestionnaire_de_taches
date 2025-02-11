@@ -1,0 +1,379 @@
+:root {
+    --title-color : #E77D31;
+    --background-color :#BBBBBB;
+    --text-color: #DBB49D;
+    --background-card-add-task:white;
+    --color-High-priority:#5F8DC9;
+    --color-Medium-priority: #D6925F;
+    --color-Low-priority:#1c9164;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+}
+
+footer {
+    padding: 2.5rem;
+    font-size: 1.3rem;
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    color: var(--title-color);
+    margin-bottom: 1rem;
+}
+
+input {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    border: 1px solid;
+    width: 15rem;
+}
+
+input:hover{
+    background-color: #DBB49D;
+    opacity: 60%;
+    outline: none; 
+    border: none;
+}
+
+#priorityElevée {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--color-High-priority); 
+    box-shadow: 0 0 5px 1px var(--color-High-priority); 
+    background-color: white;
+    vertical-align: middle; 
+    margin-right: 5px; 
+}
+
+#priorityElevée:hover {
+    background-color: var(--color-High-priority);
+    opacity: 80%;
+    box-shadow: 0 0 1px var(--color-High-priority); 
+}
+
+#priorityElevée:focus {
+    background-color: var(--color-High-priority);
+    opacity: 80%;
+    box-shadow: 0 0 1px var(--color-High-priority); 
+    outline: none; 
+}
+
+#priorityMoyenne {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--color-Medium-priority);
+    box-shadow: 0 0 5px 1px var(--color-Medium-priority); 
+    background-color: white;
+    vertical-align: middle; 
+    margin-right: 5px; 
+}
+
+#priorityMoyenne:hover {
+    background-color: var(--color-Medium-priority);
+    opacity: 80%;
+    box-shadow: 0 0 1px var(--color-Medium-priority); 
+}
+
+#priorityMoyenne:focus {
+    background-color: var(--color-Medium-priority);
+    opacity: 80%;
+    box-shadow: 0 0 1px var(--color-Medium-priority); 
+    outline: none; 
+}
+
+#priorityFaible {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--color-Low-priority); 
+    box-shadow: 0 0 5px 1px var(--color-Low-priority); 
+    background-color: white;
+    vertical-align: middle;
+    margin-right: 5px; 
+}
+
+#priorityFaible:hover {
+    background-color: var(--color-Low-priority);
+    opacity: 80%;
+    box-shadow: 0 0 1px var(--color-Low-priority); 
+}
+
+  
+#priorityFaible:focus {
+    background-color: var(--color-Low-priority);
+    opacity: 80%;
+    box-shadow: 0 0 1px var(--color-Low-priority); 
+    outline: none;
+}
+ 
+
+header h1 {
+    text-align: center;
+    margin: 2rem;
+    font-size: xx-large;
+    color: var(--title-color);
+    font-weight: bold;
+}
+
+.addTaskCard {
+    background-color: var(--background-card-add-task);
+    border-radius: 1rem;
+    width: 80%;
+    text-align: center;
+}
+
+.addTaskCard h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    color: var(--title-color);
+}
+
+.addTaskCard p {
+    padding: 0.5rem;
+    color: var(--text-color);
+    font-size:1.2rem;
+    text-decoration: underline;
+    
+}
+
+.addTaskTitle {
+    color: var(--text-color);
+}
+
+.titleTask {
+    padding: 0.5rem;
+}
+
+
+.descriptionTask {
+    padding: 0.5rem;
+}
+
+.descriptionTask p {
+    font-size: large;
+}
+
+.taskPriority p {
+    padding-bottom: 0.5rem;
+    font-size: large;
+}
+
+.taskTime {
+    padding: 0.5rem;
+}
+
+.addTask {
+    padding: 0.5rem;
+}
+
+.listTasks h2{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: var(--title-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.cardTask {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border-radius: 0.7rem;
+    border: 1px solid black;
+    background-color: var(--text-color);
+}
+
+.cardElement {
+    padding: 0.5rem;
+}
+
+.high-priority {
+    background-color: var(--color-High-priority) !important;
+    color: white;
+}
+
+.medium-priority {
+    background-color: var(--color-Medium-priority) !important; /* Couleur personnalisée pour moyenne */
+    color: black;
+}
+
+.low-priority {
+    background-color: var(--color-Low-priority) !important;
+    color: white;
+}
+
+#buttonAddTaskToList {
+    background-color: var(--title-color);
+    color: white;
+    border-radius: 1rem;
+    width: 70%;
+    font-size: 1rem;
+    border: 2px solid var(--title-color);
+    padding: 0.3rem;
+}
+
+.material-icons {
+    border: none;
+    background: transparent;
+    width: auto;
+    padding: 5px;
+}
+
+.filterContainer {
+    display: flex;
+}
+
+#priorityFilter {
+    background-color: var(--title-color);
+    color: white;
+    border-radius: 1rem;
+    width: 60%;
+    font-size: 1rem;
+    padding: 0.2rem;
+    border: 2px solid var(--title-color);
+    margin-left: 1rem;
+    text-align: center;
+}
+
+#statusFilter {
+    background-color: var(--title-color);
+    color: white;
+    border-radius: 1rem;
+    width: 55%;
+    font-size: 1rem;
+    border: 2px solid var(--title-color);
+    margin-left: 1rem;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+.taskBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.taskTerminated {
+    opacity: 40%;
+}
+
+
+@media screen and (min-width: 768px) {
+    main {
+        width: 80%;
+        max-width: 1200px;
+    }
+
+    .addTaskCard {
+        width: 70%;
+        padding: 2rem;
+    }
+
+    .filterContainer {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #priorityFilter, #statusFilter {
+        width: 200px;
+    }
+
+    /* Grille pour la liste des tâches */
+    #taskList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .cardTask {
+        margin: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .cardTask:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+/* Media Queries pour grands écrans */
+@media screen and (min-width: 1024px) {
+    .addTaskCard {
+        width: 60%;
+    }
+
+    /* Formulaire en 2 colonnes */
+    .addTaskCard form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .taskPriority, .addTask {
+        grid-column: 1 / -1;
+    }
+
+    #taskList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    input {
+        width: 20rem;
+    }
+
+    #buttonAddTaskToList {
+        width: 40%;
+    }
+
+    /* Améliorations visuelles pour desktop */
+    .cardTask {
+        padding: 1.5rem;
+    }
+
+    .taskBtn {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .cardTask:hover .taskBtn {
+        opacity: 1;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Pour très grands écrans */
+@media screen and (min-width: 1440px) {
+    #taskList {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .addTaskCard {
+        width: 50%;
+    }
+}
+
