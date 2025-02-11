@@ -26,8 +26,8 @@ main {
 footer {
     padding: 2.5rem;
     font-size: 1.3rem;
-    border-top: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
+    border-top: 1px solid var(--title-color);
+    border-bottom: 1px solid var(--title-color);
     color: var(--title-color);
     margin-bottom: 1rem;
 }
